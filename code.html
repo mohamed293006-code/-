@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="سَعْي — منصة العمل الحر. وصل مهارتك بالفرص المناسبة بسهولة وسرعة." />
+  <meta name="keywords" content="فريلانس, عمل حر, مهارات, وظائف, سعي, خمسات" />
+  <title>سَعْي — منصة العمل الحر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #333333;
+      --muted: #666666;
+      --accent: #007bff;
+      --accent-dark: #0056b3;
+      --white: #ffffff;
+      --success: #28a745;
+      --danger: #dc3545;
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; font-family: 'Cairo', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; position: sticky; top: 0; background: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 50; }
+    .brand { display: flex; gap: 10px; align-items: center; }
+    .logo { width: 48px; height: 48px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 800; font-size: 20px; box-shadow: 0 4px 12px rgba(0,123,255,0.2); }
+    .brand h1 { margin: 0; font-size: 18px; letter-spacing: .6px; }
+    nav { display: flex; gap: 12px; align-items: center; }
+    .btn-ghost { padding: 8px 12px; border-radius: 8px; background: transparent; border: 1px solid rgba(0,0,0,0.1); color: var(--text); font-weight: 600; transition: all 0.3s; }
+    .btn-ghost:hover { background: rgba(0,0,0,0.05); }
+    .btn-primary { background: var(--accent); color: var(--white); padding: 10px 16px; border-radius: 8px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,123,255,0.2); transition: all 0.3s; border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+    .hero { padding: 48px 22px; max-width: 1200px; margin: 18px auto; }
+    .hero-inner { background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6)); padding: 30px; border-radius: var(--radius); border: 1px solid rgba(0,0,0,0.05); }
+    .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px; }
+    .hero-text { flex: 1; }
+    .hero-form { flex: 1; max-width: 400px; }
+    .stats { display: flex; justify-content: space-around; margin: 40px 0; text-align: center; }
+    .stat h4 { margin: 0; font-size: 32px; color: var(--accent); }
+    .stat p { margin: 5px 0 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 40px 0; }
+    .card { background: var(--card); padding: 18px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .card:hover { transform: translateY(-5px); }
+    .feature-icon { font-size: 24px; color: var(--accent); margin-bottom: 10px; }
+    .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+    .testimonials { margin: 40px 0; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .forms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+    .slider { position: relative; height: 200px; background: var(--accent); color: var(--white); border-radius: var(--radius); overflow: hidden; margin-bottom: 20px; }
+    .slides { display: flex; width: 300%; transition: transform 0.5s; }
+    .slide { width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+    .slide.active { transform: translateX(0); }
+    .slide:nth-child(2) { transform: translateX(-100%); }
+    .slide:nth-child(3) { transform: translateX(-200%); }
+    .slider button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); border: none; color: var(--white); padding: 10px; border-radius: 50%; cursor: pointer; transition: background 0.3s; }
+    .slider .prev { left: 10px; }
+    .slider .next { right: 10px; }
+    .slider button:hover { background: rgba(255,255,255,0.4); }
+
+    form { display: flex; flex-direction: column; gap: 10px; }
+    input, select, textarea { padding: 12px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); background: var(--white); color: var(--text); outline: none; }
+    input::placeholder, textarea::placeholder { color: #999; }
+    .two { display: flex; gap: 10px; }
+    .small { font-size: 13px; color: var(--muted); }
+    .center { text-align: center; }
+    .muted { color: var(--muted); }
+    .badge { display: inline-block; background: rgba(0,123,255,0.1); color: var(--accent); padding: 6px 10px; border-radius: 20px; font-weight: 700; }
+
+    footer { margin-top: 36px; padding: 24px; text-align: center; color: var(--muted); font-size: 13px; background: var(--white); border-top: 1px solid rgba(0,0,0,0.05); }
+
+    @media (max-width: 900px) {
+      .grid, .how, .forms-grid, .testimonial-grid { grid-template-columns: 1fr; }
+      header { padding: 12px; flex-direction: column; gap: 10px; }
+      .hero-content { grid-template-columns: 1fr; gap: 20px; }
+      .stats { flex-direction: column; gap: 20px; }
+      .slider { height: 150px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo"><i class="fas fa-briefcase"></i></div>
+      <div>
+        <h1>سَعْي</h1>
+        <div class="small muted">منصة العمل الحر — وصل مهارتك بالفرص</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#how" class="btn-ghost"><i class="fas fa-info-circle"></i> كيف تعمل</a>
+      <a href="#join" class="btn-ghost"><i class="fas fa-user-plus"></i> انضم كـ مستقل</a>
+      <a href="#companies" class="btn-ghost"><i class="fas fa-building"></i> لأصحاب العمل</a>
+      <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> تواصل معنا</a>
+    </nav>
+  </header>
+
+  <main class="hero" role="main">
+    <div class="hero-inner">
+      <!-- Slider Section -->
+      <div class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <h2>اكتشف خدمات فريلانس متنوعة</h2>
+            <p>من التصميم إلى البرمجة، ابحث عن الخدمة المناسبة لك.</p>
+          </div>
+          <div class="slide">
+            <h2>انضم كمستقل وابدأ مشروعك</h2>
+            <p>سجل مهارتك واحصل على فرص عمل حقيقية.</p>
+          </div>
+          <div class="slide">
+            <h2>للشركات: اطلب خدمات مخصصة</h2>
+            <p>نحن نربطك بالمستقلين المحترفين بسرعة.</p>
+          </div>
+        </div>
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="badge"><i class="fas fa-star"></i> منصة جديدة</div>
+          <h2>سَعْي — صاحب المهارة يجد فرصته</h2>
+          <p>انضم لشبكة سَعْي اليوم: سجل مهارتك، استلم مهام حقيقية، واجمع تقييمات تزيد من قيمة ملفك. سهل، سريع، وبدون تعقيد.</p>
+          <div class="actions">
+            <a class="btn-primary" href="#join"><i class="fas fa-sign-in-alt"></i> سجّل كمُستقل</a>
+            <a class="btn-ghost" href="#companies"><i class="fas fa-search"></i> أبحث عن موظف</a>
+          </div>
+        </div>
+        <div class="hero-form">
+          <div class="card">
+            <h3 class="center"><i class="fas fa-rocket"></i> سجل الآن</h3>
+            <form id="quickJoin" action="https://formspree.io/f/your-form-id" method="POST">
+              <input type="text" name="name" id="q-name" placeholder="الإسم الكامل" required>
+              <input type="tel" name="phone" id="q-phone" placeholder="رقم الموبايل" required>
+              <select name="skill" id="q-skill" required>
+                <option value="">اختر تخصصك</option>
+                <option>خدمة عملاء</option>
+                <option>مبيعات عبر الهاتف</option>
+                <option>تصميم جرافيك</option>
+                <option>ترجمة</option>
+                <option>تسويق سوشيال</option>
+                <option>إدخال بيانات</option>
+                <option>أخرى</option>
+              </select>
+              <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> أرسل بياناتي</button>
+              <div id="q-msg" class="small muted center"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats">
+        <div class="stat"><h4>500+</h4><p>مستقل مسجل</p></div>
+        <div class="stat"><h4>1000+</h4><p>مهمة مكتملة</p></div>
+        <div class="stat"><h4>4.8</h4><p>تقييم متوسط</p></div>
+      </div>
+
+      <!-- Features -->
+      <div class="grid">
+        <div class="card">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3>ملفات أداء قابلة للعرض</h3>
+          <p>كل مستقل يكسب تقييمات تظهر للعميل التالي — الجودة تُكسب المزيد من الفرص.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-clock feature-icon"></i>
+          <h3>مهام سريعة ومؤجلة</h3>
+          <p>مهام يومية قصيرة أو مشروعات طويلة — تختار ما يناسبك وتبدأ فوراً.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-brain feature-icon"></i>
+          <h3>نظام ترشيح ذكي</h3>
+          <p>نطابق المهارات مع احتياج الشركات بسرعة وبسلاسة.</p>
+        </div>
+      </div>
+
+      <!-- How it works -->
+      <section id="how">
+        <h2 class="center"><i class="fas fa-cogs"></i> كيف تعمل سَعْي؟</h2>
+        <p class="center muted">ثلاث خطوات بسيطة — سجّل، استلم المهمة، احصل على تقييم.</p>
+        <div class="how">
+          <div class="card">
+            <h3><i class="fas fa-user-edit"></i> 1. سجّل ملفك</h3>
+            <p>ادخل اسمك، مهاراتك، وارفع أمثلة سريعة عن شغلك (صور/لينك).</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-tasks"></i> 2. استلم مهام</h3>
+            <p>نبلغك فور ظهور مهمة مناسبة — تقبل وتنفّذ بسهولة.</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-star-half-alt"></i> 3. اكسب تقييم</h3>
+            <p>كل تقييم يزيد من ظهور ملفك ويزيد من فرصك للمهام الأفضل.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <h2 class="center"><i class="fas fa-comments"></i> آراء العملاء</h2>
+        <div class="testimonial-grid">
+          <div class="card">
+            <p>"سَعْي ساعدتني في العثور على عملاء رائعين بسرعة!"</p>
+            <cite>- أحمد، مصمم جرافيك</cite>
+          </div>
+          <div class="card">
+            <p>"منصة موثوقة وسهلة الاستخدام."</p>
+            <cite>- فاطمة، مترجمة</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join / Companies -->
+      <div class="forms-grid">
+        <div class="card" id="join">
+          <h3><i class="fas fa-user-plus"></i> انضم كمُستقل</h3>
+          <p class="small muted">املأ النموذج وسنراسلِك لترتيب اختبار صغير للتأكد من المهارة.</p>
+          <form id="freelancerForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" id="name" placeholder="الإسم الكامل" required>
+            <input type="tel" name="phone" id="phone" placeholder="رقم الموبايل" required>
+            <input type="email" name="email" id="email" placeholder="البريد ال

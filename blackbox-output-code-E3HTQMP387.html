@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="سَعْي — منصة العمل الحر. وصل مهارتك بالفرص المناسبة بسهولة وسرعة." />
+  <meta name="keywords" content="فريلانس, عمل حر, مهارات, وظائف, سعي" />
+  <title>سَعْي — منصة العمل الحر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo"><i class="fas fa-briefcase"></i></div>
+      <div>
+        <h1>سَعْي</h1>
+        <div class="small muted">منصة العمل الحر — وصل مهارتك بالفرص</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#how" class="btn-ghost"><i class="fas fa-info-circle"></i> كيف تعمل</a>
+      <a href="#join" class="btn-ghost"><i class="fas fa-user-plus"></i> انضم كـ مستقل</a>
+      <a href="#companies" class="btn-ghost"><i class="fas fa-building"></i> لأصحاب العمل</a>
+      <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> تواصل معنا</a>
+    </nav>
+  </header>
+
+  <main class="hero" role="main">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="badge"><i class="fas fa-star"></i> منصة جديدة</div>
+          <h2>سَعْي — صاحب المهارة يجد فرصته</h2>
+          <p>انضم لشبكة سَعْي اليوم: سجل مهارتك، استلم مهام حقيقية، واجمع تقييمات تزيد من قيمة ملفك. سهل، سريع، وبدون تعقيد.</p>
+          <div class="actions">
+            <a class="btn-primary" href="#join"><i class="fas fa-sign-in-alt"></i> سجّل كمُستقل</a>
+            <a class="btn-ghost" href="#companies"><i class="fas fa-search"></i> أبحث عن موظف</a>
+          </div>
+        </div>
+        <div class="hero-form">
+          <div class="card">
+            <h3 class="center"><i class="fas fa-rocket"></i> سجل الآن</h3>
+            <form id="quickJoin" action="https://formspree.io/f/your-form-id" method="POST">
+              <input type="text" name="name" id="q-name" placeholder="الإسم الكامل" required>
+              <input type="tel" name="phone" id="q-phone" placeholder="رقم الموبايل" required>
+              <select name="skill" id="q-skill" required>
+                <option value="">اختر تخصصك</option>
+                <option>خدمة عملاء</option>
+                <option>مبيعات عبر الهاتف</option>
+                <option>تصميم جرافيك</option>
+                <option>ترجمة</option>
+                <option>تسويق سوشيال</option>
+                <option>إدخال بيانات</option>
+                <option>أخرى</option>
+              </select>
+              <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> أرسل بياناتي</button>
+              <div id="q-msg" class="small muted center"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats">
+        <div class="stat"><h4>500+</h4><p>مستقل مسجل</p></div>
+        <div class="stat"><h4>1000+</h4><p>مهمة مكتملة</p></div>
+        <div class="stat"><h4>4.8</h4><p>تقييم متوسط</p></div>
+      </div>
+
+      <!-- Features -->
+      <div class="grid">
+        <div class="card">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3>ملفات أداء قابلة للعرض</h3>
+          <p>كل مستقل يكسب تقييمات تظهر للعميل التالي — الجودة تُكسب المزيد من الفرص.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-clock feature-icon"></i>
+          <h3>مهام سريعة ومؤجلة</h3>
+          <p>مهام يومية قصيرة أو مشروعات طويلة — تختار ما يناسبك وتبدأ فوراً.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-brain feature-icon"></i>
+          <h3>نظام ترشيح ذكي</h3>
+          <p>نطابق المهارات مع احتياج الشركات بسرعة وبسلاسة.</p>
+        </div>
+      </div>
+
+      <!-- How it works -->
+      <section id="how">
+        <h2 class="center"><i class="fas fa-cogs"></i> كيف تعمل سَعْي؟</h2>
+        <p class="center muted">ثلاث خطوات بسيطة — سجّل، استلم المهمة، احصل على تقييم.</p>
+        <div class="how">
+          <div class="card">
+            <h3><i class="fas fa-user-edit"></i> 1. سجّل ملفك</h3>
+            <p>ادخل اسمك، مهاراتك، وارفع أمثلة سريعة عن شغلك (صور/لينك).</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-tasks"></i> 2. استلم مهام</h3>
+            <p>نبلغك فور ظهور مهمة مناسبة — تقبل وتنفّذ بسهولة.</p>
+          </div>
+          <div class="card">
+            <h3><i class="fas fa-star-half-alt"></i> 3. اكسب تقييم</h3>
+            <p>كل تقييم يزيد من ظهور ملفك ويزيد من فرصك للمهام الأفضل.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <h2 class="center"><i class="fas fa-comments"></i> آراء العملاء</h2>
+        <div class="testimonial-grid">
+          <div class="card">
+            <p>"سَعْي ساعدتني في العثور على عملاء رائعين بسرعة!"</p>
+            <cite>- أحمد، مصمم جرافيك</cite>
+          </div>
+          <div class="card">
+            <p>"منصة موثوقة وسهلة الاستخدام."</p>
+            <cite>- فاطمة، مترجمة</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join / Companies -->
+      <div class="forms-grid">
+        <div class="card" id="join">
+          <h3><i class="fas fa-user-plus"></i> انضم كمُستقل</h3>
+          <p class="small muted">املأ النموذج وسنراسلِك لترتيب اختبار صغير للتأكد من المهارة.</p>
+          <form id="freelancerForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" id="name" placeholder="الإسم الكامل" required>
+            <input type="tel" name="phone" id="phone" placeholder="رقم الموبايل" required>
+            <input type="email" name="email" id="email" placeholder="البريد الإلكتروني" required>
+            <input type="text" name="skill" id="skill" placeholder="تخصصك / مهارتك" required>
+            <textarea name="bio" id="bio" rows="3" placeholder="نبذة قصيرة عنك"></textarea>
+            <div class="two">
+              <input type="text" name="city" id="city" placeholder="المدينة" required>
+              <input type="text" name="price" id="price" placeholder="سعر ساعة/مهمة">
+            </div>
+            <button type="submit" class="btn-primary"><i class="fas fa-check"></i> سجل كمُستقل</button>
+            <div id="freemsg" class="small muted"></div>
+          </form>
+        </div>
+        <div class="card" id="companies">
+          <h3><i class="fas fa-building"></i> أصحاب العمل</h3>
+          <p class="small muted">انشر وظيفة أو اطلب مرشح جاهز للعمل خلال أيام.</p>
+          <form id="companyForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="cname" id="cname" placeholder="اسم الشركة / النشاط" required>
+            <input type="text" name="ccontact" id="ccontact" placeholder="اسم المسؤول ورقم الموبايل" required>
+            <input type="email" name="cemail" id="cemail" placeholder="البريد الإلكتروني" required>
+            <input type="text" name="position" id="position" placeholder="نوع الوظيفة المطلوبة" required>
+            <textarea name="details" id="details" rows="3" placeholder="تفاصيل الشغل وموعد البدء"></textarea>
+            <button type="submit" class="btn-primary"><i class="fas fa-send"></i> أرسل طلبك</button>
+            <div id="commsg" class="small muted"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div id="contact" class="card">
+        <h3 class="center"><i class="fas fa-envelope"></i> تواصل معنا</h3>
+        <p class="center muted">للتعاون أو الدعم: <strong>mohamed293006@gmail.com</strong></p>
+        <div class="center">
+          <a href="https://wa.me/201553533261" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> راسلنا واتساب</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> سَعْي — منصة العمل الحر. جميع الحقوق محفوظة.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

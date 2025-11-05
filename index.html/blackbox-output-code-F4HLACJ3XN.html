@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سَعْي — منصة العمل الحر</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-symbol">س</div>
+      <h1>سَعْي</h1>
+    </div>
+
+    <nav>
+      <a href="#how">كيف تعمل</a>
+      <a href="#join">انضم</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>سَعْي — منصتك للعمل الحر</h2>
+    <p>انضم إلى شبكة سعي وابدأ في تقديم خدماتك أو إيجاد مستقلين لتنفيذ مشاريعك بكل سهولة واحترافية.</p>
+    <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">ابدأ الآن</button>
+  </section>
+
+  <section class="section" id="how">
+    <h3>كيف تعمل سَعْي؟</h3>
+    <p style="text-align:center;color:var(--muted)">سجل، ابدأ، واحصل على تقييمات تزيد من فرصك.</p>
+  </section>
+
+  <section class="section" id="join">
+    <h3>سجل كمستقل</h3>
+    <form id="joinForm">
+      <input type="text" id="name" placeholder="الاسم الكامل" required>
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+      <input type="tel" id="phone" placeholder="رقم الهاتف" required>
+      <input type="text" id="skill" placeholder="مجال العمل" required>
+      <textarea id="bio" placeholder="نبذة قصيرة عنك"></textarea>
+      <button type="submit" class="btn-primary">إرسال</button>
+      <p id="msg" style="text-align:center;color:var(--muted);margin-top:8px"></p>
+    </form>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>تواصل معنا</h3>
+    <p style="text-align:center;color:var(--muted)">راسلنا على البريد: <strong>sa3y.neywork@gmail.com</strong></p>
+    <div style="text-align:center;margin-top:10px;">
+      <a href="https://wa.me/201553533261" class="btn-primary" target="_blank">واتساب</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> سَعْي — جميع الحقوق محفوظة.
+  </footer>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
